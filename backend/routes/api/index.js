@@ -41,9 +41,10 @@ const { restoreUser } = require("../../utils/auth.js");
   // If current user session is not valid, set req.user to null
 router.use(restoreUser);
 
-router.post("/test", function (req, res) {
-  res.json({ requestBody: req.body });
-});
+//You can now remove the POST /api/test test route in your backend code, as you won't be needing it anymore.
+// router.post("/test", function (req, res) {
+//   res.json({ requestBody: req.body });
+// });
 
 router.use("/session", sessionRouter);
 
